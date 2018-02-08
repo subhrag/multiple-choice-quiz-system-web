@@ -1,0 +1,28 @@
+
+.main-div {
+	width : 900px;
+	
+}
+.h4-title {
+	
+color:blue;
+
+}
+
+.result-container-div {
+	 width : 600px;
+	 background-color:aqua;
+}
+
+.question-container-div {
+	 width : 600px;
+	 background-color:aqua;
+}
+
+.hidden-row {
+	height: 10px;
+}
+
+.retake-test {
+	color:#ff0000;
+}
