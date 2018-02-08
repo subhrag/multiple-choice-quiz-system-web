@@ -34,7 +34,7 @@
 					<div class='col-sm-1'></div>
 					<div class='col-sm-6'>
 					<c:set var='answerOption' >${answer.answerId}</c:set>
-						<input class="inpt-radio" type="radio" 
+						<input class="inpt-radio" type="radio" disabled="disabled" 
 							<c:if test="${userAnswerId eq answerOption}"> checked="checked" </c:if>
 							name="questionAnswerMap[${var_question.questionId}]"
 							value="${answer.answerId}" />${answer.answerText}
