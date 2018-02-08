@@ -8,8 +8,9 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.subhra.quiz.system.persistence.dto.Question;
-import com.subhra.quiz.system.persistence.dto.QuestionAnswer;
+
+import com.subhra.quiz.system.persistence.model.Question;
+import com.subhra.quiz.system.persistence.model.QuestionAnswer;
 import com.subhra.quiz.system.persistence.repository.QuestionAnswerRepository;
 import com.subhra.quiz.system.persistence.repository.QuestionRepository;
 import com.subhra.quiz.system.service.QuestionService;

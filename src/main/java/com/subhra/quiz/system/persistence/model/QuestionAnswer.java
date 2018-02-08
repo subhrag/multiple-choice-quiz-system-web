@@ -1,4 +1,4 @@
-package com.subhra.quiz.system.persistence.dto;
+package com.subhra.quiz.system.persistence.model;
 
 
 import javax.persistence.Column;

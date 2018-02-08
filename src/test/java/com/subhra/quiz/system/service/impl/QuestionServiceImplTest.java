@@ -12,7 +12,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.subhra.quiz.system.persistence.dto.QuestionAnswer;
+import com.subhra.quiz.system.persistence.model.QuestionAnswer;
 import com.subhra.quiz.system.persistence.repository.QuestionAnswerRepository;
 
 import static org.mockito.Mockito.when;

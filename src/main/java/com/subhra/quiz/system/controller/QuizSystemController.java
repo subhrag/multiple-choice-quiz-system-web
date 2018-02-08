@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.subhra.quiz.system.dto.QuestionAnswerForm;
 import com.subhra.quiz.system.exception.EmptyAnswerException;
-import com.subhra.quiz.system.persistence.dto.Question;
-import com.subhra.quiz.system.persistence.dto.QuestionAnswerForm;
+import com.subhra.quiz.system.persistence.model.Question;
 import com.subhra.quiz.system.service.QuestionService;
 
 @Controller

@@ -34,7 +34,7 @@ public class QuizSystemPersistenceConfiguration {
 		
 		localContainerEntityManagerFactoryBean.setJpaVendorAdapter(hibernateJpaVendorAdapter);
 		localContainerEntityManagerFactoryBean.setDataSource(dataSource());
-		localContainerEntityManagerFactoryBean.setPackagesToScan("com.subhra.quiz.system.persistence.dto");
+		localContainerEntityManagerFactoryBean.setPackagesToScan("com.subhra.quiz.system.persistence.model");
 		return localContainerEntityManagerFactoryBean;
 	}
 

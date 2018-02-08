@@ -1,10 +1,12 @@
-package com.subhra.quiz.system.persistence.dto;
+package com.subhra.quiz.system.dto;
 
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.subhra.quiz.system.persistence.model.Question;
 
 public class QuestionAnswerForm {
 
