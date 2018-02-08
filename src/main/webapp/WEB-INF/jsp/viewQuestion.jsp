@@ -17,6 +17,7 @@
 </head>
 <body class="question-body">
 	<div class='container question-container-div'>
+	<h4 class='h4-title' align="center">**Welcome to the Quiz Contest**</h4>
 		<h4 class='h4-title'>Please answer the below questions :</h4>
 		<form:form class='main-form' modelAttribute='questionAndAnswer'
 			method='POST' action='submit-answer'>
