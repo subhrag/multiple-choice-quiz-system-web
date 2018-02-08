@@ -4,6 +4,7 @@ package com.subhra.quiz.system.persistence.configure;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -13,12 +14,24 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 
 
 @Configuration
 @EnableJpaRepositories(basePackages = "com.subhra.quiz.system.persistence.repository", entityManagerFactoryRef="entityManagerFactoryBean")
 public class QuizSystemPersistenceConfiguration {
+	
+	@Value("${db.driver}")
+	private String driver;
+	
+	@Value("${db.url}")
+	private String url;
+	
+	@Value("${db.username}")
+	private String username;
+	
+	@Value("${db.password}")
+	private String password;
 	
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
@@ -41,10 +54,10 @@ public class QuizSystemPersistenceConfiguration {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource datasource = new DriverManagerDataSource();
-		datasource.setDriverClassName("org.postgresql.Driver");
-		datasource.setUsername("postgres");
-		datasource.setUrl("jdbc:postgresql://localhost:5432/postgres");
-		datasource.setPassword("password");
+		datasource.setDriverClassName(driver);
+		datasource.setUsername(username);
+		datasource.setUrl(url);
+		datasource.setPassword(password);
 		return datasource;
 	}
 	
