@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<questions>
+    <question id="1">
+        <title>This is 1?</title>
+        <answer id="1">ans 1</answer>
+        <answer id="2">ans 2</answer>
+    </question>
+</questions>

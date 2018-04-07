@@ -19,16 +19,18 @@ public class Question {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "QUESTION_NUMBER")
+	@Column(name = "QUESTION_ID")
 	private Long questionId;
 	
+	//@Column(name = "QUESTION_NUMBER", nullable = false)
+	//private String questionNumber;
 	
 	@Column(name = "QUESTION_DESCRIPTION", nullable = false)
 	private String questionDescription;
 	
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "QUESTION_ID")
+	@JoinColumn(name = "QUESTION_ID" , nullable = false)
 	private List<Answer> answerList;
 	
 	
@@ -38,33 +40,42 @@ public class Question {
 		return questionId;
 	}
 
+
 	public void setQuestionId(Long questionId) {
 		this.questionId = questionId;
 	}
+
+
+	/*public String getQuestionNumber() {
+		return questionNumber;
+	}
+
+
+	public void setQuestionNumber(String questionNumber) {
+		this.questionNumber = questionNumber;
+	}*/
 
 
 	public String getQuestionDescription() {
 		return questionDescription;
 	}
 
+
 	public void setQuestionDescription(String questionDescription) {
 		this.questionDescription = questionDescription;
 	}
+
 
 	public List<Answer> getAnswerList() {
 		return answerList;
 	}
 
+
 	public void setAnswerList(List<Answer> answerList) {
 		this.answerList = answerList;
 	}
 
-	@Override
-	public String toString() {
-		return "Question [questionId=" + questionId + ", questionDescription=" + questionDescription + ", answerList="
-				+ answerList + "]";
-	}
-	
+
 	
 	
 }

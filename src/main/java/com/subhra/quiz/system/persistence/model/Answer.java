@@ -16,6 +16,11 @@ public class Answer {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long answerId;
 	
+	//@Column(name = "ANSWER_NUMBER")
+	//private String answerNumber;
+	
+	
+
 	@Column(name = "ANSWER_TEXT")
 	private String answerText;
 	
@@ -28,12 +33,22 @@ public class Answer {
 	public void setAnswerId(Long answerId) {
 		this.answerId = answerId;
 	}
+	
+	/*public String getAnswerNumber() {
+		return answerNumber;
+	}
+
+	public void setAnswerNumber(String answerNumber) {
+		this.answerNumber = answerNumber;
+	}
+	*/
 	public String getAnswerText() {
 		return answerText;
 	}
 	public void setAnswerText(String answerText) {
 		this.answerText = answerText;
 	}
+	
 	
 	@Override
 	public String toString() {

@@ -22,12 +22,14 @@
 		<form:form class='main-form' modelAttribute='questionAndAnswer'
 			method='POST' action='submit-answer'>
 			
-
+			<c:set var="numberOfRows" value="1"/>
+			
 				<c:forEach items="${questions}" var="var_question">
+				
 				<div class='row'>
 					<div class='col-sm-6'>
-					${var_question.questionId} . ${var_question.questionDescription}
-					
+					${numberOfRows} . ${var_question.questionDescription}
+					<c:set var="numberOfRows" value="${numberOfRows+1}"/>
 					</div>
 					</div>	
 					<c:forEach items="${var_question.answerList}" var="answer"
