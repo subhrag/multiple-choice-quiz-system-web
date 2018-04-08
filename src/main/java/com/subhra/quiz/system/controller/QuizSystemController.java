@@ -44,7 +44,7 @@ public class QuizSystemController {
 	
 	
 	@PostMapping("/add-questions")
-	public RedirectView  addQuestionsFromXml(@RequestParam("xmlFile") MultipartFile multiPartFile, RedirectAttributes redirect) throws IOException {
+	public RedirectView  addQuestionsFromXml(@RequestParam("xmlFile") MultipartFile multiPartFile) throws IOException {
 	
 			if(multiPartFile.getOriginalFilename().isEmpty()) {
 				throw new FileNotFoundException("File is not found !" );

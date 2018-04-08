@@ -71,9 +71,9 @@ public class QuestionServiceImpl implements QuestionService {
 		}
 		if (!toBeAddedquestionList.isEmpty() && toBeAddedquestionList != null) {
 
-			for (Questions toBeAddedquestionQuestions : toBeAddedquestionList) {
+			for (Questions toBeAddedQuestions : toBeAddedquestionList) {
 
-				this.saveQuestionDto(toBeAddedquestionQuestions, toBeAddedquestionQuestions.getListOfAnswers());
+				this.saveQuestionDto(toBeAddedQuestions, toBeAddedQuestions.getListOfAnswers());
 				/*
 				 * 
 				 * List<Answer> answerList = new ArrayList<>(); Question questionDto = new
@@ -102,7 +102,7 @@ public class QuestionServiceImpl implements QuestionService {
 							a1 -> dbAnswers.stream().noneMatch(a2 -> a2.getAnswerText().equals(a1.getAnswerText())))
 							.collect(Collectors.toList());
 					
-					if (diffAnswers.isEmpty() && diffAnswers == null) {
+					if (diffAnswers == null || diffAnswers.isEmpty() ) {
 						if(inputAnswers.size()<dbAnswers.size()) {
 							
 							questionRepository.delete(dbQuestion.getQuestionId());
